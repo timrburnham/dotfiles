@@ -46,7 +46,7 @@ nnoremap <F3> :noh<CR>
 nnoremap <F4> :%s/<c-r><c-w>/<c-r><c-w>/gc<c-f>$F/i
 vnoremap * y/<C-R>"<CR>
 
-" Scroll buffers with ctrl-n/ctrl-p
+" Scroll buffers with ctrl n/p
 :nnoremap <C-n> :bnext<CR>
 :nnoremap <C-p> :bprevious<CR>
 
