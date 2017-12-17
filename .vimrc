@@ -14,19 +14,13 @@ let &titleold=hostname()
 set ruler
 
 " Solarized
-set background=dark
-colorscheme solarized
-set number
-" Stuff to make Solarized work right
-if has("terminfo")
-  let &t_Co=16
-  let &t_AB="\<Esc>[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm"
-  let &t_AF="\<Esc>[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm"
+if has("nvim")
+	colorscheme flattened_light
 else
-  let &t_Co=16
-  let &t_Sf="\<Esc>[3%dm"
-  let &t_Sb="\<Esc>[4%dm"
+	colorscheme flattened_dark
 endif
+
+set number
 
 " Splits
 nnoremap <C-J> <C-W><C-J>
