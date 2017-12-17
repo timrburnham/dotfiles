@@ -6,10 +6,8 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-alias ls="ls -Fsh --color=auto"
-alias ids="cd $ids"
-alias com="cd $com"
-alias tmp="cd $DATA_DIR"
+#alias ls="ls -Fsh --color=auto"
+alias view="vim -R"
 
 if [ -t ]; then # interactive shell
 	eval `dircolors ~/.dircolors`
