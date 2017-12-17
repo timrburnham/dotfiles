@@ -12,6 +12,5 @@ alias view="vim -R"
 if [ -t ]; then # interactive shell
 	eval `dircolors ~/.dircolors`
 	set -o vi
-#	export PS1="\033[33m\u@\h\033[00m:\033[36m\w \033[00m\\$ \[$(tput sgr0)\]"
-	export PS1="\[\e[33m\]\u@\h\[\e[0m\]:\[\e[36m\]\w/\[\e[0m\]"
+	export PS1="\[\e[33m\]\u@\h\[\e[0m\]:\[\e[36m\]\w/\[\e[0m\] "
 fi
