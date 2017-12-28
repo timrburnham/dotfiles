@@ -11,10 +11,10 @@ alias ll="ls -ltr"
 alias view="vim -R"
 #alias md5sum="md5 -r" # macOS weirdnesss
 
-up () { 
+..() { 
 	cd $(printf '../%.0s' $(seq 1 $1))
 }
-export -f up
+export -f ..
 
 if [ -t ]; then # interactive shell
 	# Homebrew bash completion
