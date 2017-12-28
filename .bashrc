@@ -6,8 +6,14 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # User specific aliases and functions
-#alias ls="ls -Fsh --color=auto"
+alias ls="ls -Fsh --color=auto"
+alias ll="ls -ltr"
 alias view="vim -R"
+
+up () { 
+    cd $(printf '../%.0s' $(seq 1 $1))
+}
+export -f up
 
 if [ -t ]; then # interactive shell
 	eval `dircolors ~/.dircolors`
