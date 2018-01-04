@@ -21,5 +21,6 @@ if [ -t ]; then # interactive shell
 	[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 	eval `dircolors ~/.dircolors`
 	set -o vi
+	export EDITOR=vim
 	export PS1="\[\e[33m\]\u@\h\[\e[0m\]:\[\e[36m\]\w/\[\e[0m\] "
 fi
