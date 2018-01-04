@@ -6,11 +6,13 @@ set shiftwidth=4
 set softtabstop=4
 set nocompatible
 set ttyfast
+set number
 set mouse=a
 " set laststatus=2
 " set statusline+=%F
 set title
 let &titleold=hostname()
+let mapleader = ","
 set ruler
 
 " Solarized
@@ -19,8 +21,6 @@ if has("nvim")
 else
 	colorscheme flattened_dark
 endif
-
-set number
 
 " Splits
 nnoremap <C-J> <C-W><C-J>
@@ -31,13 +31,13 @@ set splitbelow
 set splitright
 
 " Save and execute current buffer
-map <F5> :w<CR>:!%:p<CR>
+map <leader>! :w<CR>:!%:p<CR>
 
 " Hide highlights
 nnoremap <F3> :noh<CR>
 
-" Search and replace word under cursor using F4
-nnoremap <F4> :%s/<c-r><c-w>/<c-r><c-w>/gc<c-f>$F/i
+" Search and replace word under cursor
+nnoremap <leader>s :%s/<c-r><c-w>/<c-r><c-w>/gc<c-f>$F/i
 vnoremap * y/<C-R>"<CR>
 
 " Scroll buffers with ctrl n/p
@@ -47,8 +47,12 @@ vnoremap * y/<C-R>"<CR>
 " Quick double ; to Esc
 map! ;; <Esc>
 
-" # line with F11, remove with F12
-map <F11> :s/^/#/<CR>:noh<CR>
-map <F12> :s/^#//<CR>:noh<CR>
+" Comment/uncomment line
+map <leader>c :s/^/#/<CR>:noh<CR>
+map <leader>u :s/^#//<CR>:noh<CR>
+
+" Visual select word
+nmap <space> viw
+vmap <space> w
 
 autocmd FileType python setlocal expandtab
