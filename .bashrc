@@ -16,6 +16,12 @@ up() {
 }
 export -f up
 
+parse_git_branch() {
+	branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+	[[ ! -z "$branch" ]] && print "[$branch]"
+}
+export -f parse_git_branch
+
 if [ -t ]; then # interactive shell
 	# Homebrew bash completion
 	[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
